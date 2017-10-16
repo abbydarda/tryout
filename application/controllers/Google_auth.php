@@ -50,7 +50,7 @@ class Google_auth extends CI_Controller
         $data['loginURL'] = $this->google->loginURL();
 
         //load google login view
-        $this->load->view('google_auth/index',$data);
+        $this->load->view('profile',$data);
     }
 
     public function profile(){
@@ -73,6 +73,6 @@ class Google_auth extends CI_Controller
         $this->session->sess_destroy();
 
         //redirect to login page
-        redirect('/google_auth/');
+        redirect('index.php/Login');
     }
 }
